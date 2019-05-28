@@ -49,3 +49,4 @@ gem 'rack-cors'
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem "jwt", "~> 2.2"
+gem 'pry'

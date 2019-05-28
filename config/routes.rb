@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :users
   post '/login', to: 'auth#create'
-  get '/posts', to: 'posts#index'
+  get '/main', to: 'users#profile'
 end
