@@ -11,6 +11,11 @@ class ClapsController < ApplicationController
     render json: @clap
   end
 
+  def destroy
+    @clap = Clap.find(id)
+    @clap.destroy
+  end
+
 
   private
   def clap_params
