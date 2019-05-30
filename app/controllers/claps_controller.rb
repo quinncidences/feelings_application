@@ -19,7 +19,6 @@ class ClapsController < ApplicationController
     @clap = Clap.select do |c| c.user_id == @user_id && c.post_id == @post_id end
     puts 'CLAP', @clap
     @clap[0].destroy
-    # redirect_back(fallback_location: root_path)
   end
 
 
