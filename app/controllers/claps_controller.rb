@@ -14,10 +14,7 @@ class ClapsController < ApplicationController
   def destroy
     @user_id = params[:clap][:user_id].to_i
     @post_id = params[:clap][:post_id].to_i
-    puts "USERID", @user_id, @user_id.class
-    puts "POSTID", @post_id, @post_id.class
     @clap = Clap.select do |c| c.user_id == @user_id && c.post_id == @post_id end
-    puts 'CLAP', @clap
     @clap[0].destroy
   end
 
